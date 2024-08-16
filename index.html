@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,77 +9,95 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .hideden{
+                display: none;
+            }
+            .visible{
+                display: block;
+            }
+        </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="left">Deep's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact Me</a></li>
-
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi, My name is <span class="purple">Deep</span> 
-                <div>and I am a Passionate</div>
-                <!-- <div>Fullstack Developer</div> -->
-                <span id="element"></span>
-            </div>
-            <div class="rightSection">
-                <img src="/images/Developer png.png" alt="">
-            </div>
-        </section>
-
-        <hr>
-        <section class="secondSection">
-            <span class="text-grey">What i have done so far</span>
-            <h1>I have learned</h1>
-
-            <div class="box">
-                <div class="vertical">
-                    <img class="img-top" src="/images/html-removebg.png" alt="">
-                    <div class="vertical-text">HTML</div>
-                    <div class="vertical-desc"></div>
+    <h1 id="h1"></h1>
+    <div class="mainparent">
+        <header>
+            <nav>
+                <div class="left">Deep's Portfolio</div>
+                <div class="right" id="right">
+                    <ul id="list">
+                        <li class="list"><a href="#">Home</a></li>
+                        <li class="list"><a href="#">About</a></li>
+                        <li class="list"><a href="#">Services</a></li>
+                        <li class="list"><a href="#">Projects</a></li>
+                        <li class="list"><a href="#">Contact Me</a></li>
+                            <div class="toggleBox" id="toggle">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                    </ul>
                 </div>
-                <div class="vertical">
-                    <img class="img-top" src="/images/css-removebg.png" alt="">
-                    <div class="vertical-text">CSS</div>
-                    <div class="vertical-desc"></div>
+            </nav>
+        </header>
+        <main>
+            <section class="firstSection">
+                <div class="leftSection">
+                    Hi, My name is <span class="purple">Deep</span>
+                    <div>and I am a Passionate</div>
+                    <!-- <div>Fullstack Developer</div> -->
+                    <span id="element"></span>
                 </div>
-                <div class="vertical">
-                    <img class="img-top" src="/images/JavaScript-logo.png" alt="">
-                    <div class="vertical-text">Javascript</div>
-                    <div class="vertical-desc"></div>
+                <div class="rightSection">
+                    <img src="/images/Developer png.png" alt="">
                 </div>
-                <div class="vertical">
-                    <img class="img-top" src="/images/c.png" alt="">
-                    <div class="vertical-text">C</div>
-                    <div class="vertical-desc"></div>
+            </section>
+    
+            <hr>
+            <section class="secondSection">
+                <span class="text-grey">What i have done so far</span>
+                <h1>I have learned</h1>
+    
+                <div class="box">
+                    <div class="vertical">
+                        <img class="img-top" src="/images/html-removebg.png" alt="">
+                        <div class="vertical-text">HTML</div>
+                        <div class="vertical-desc"></div>
+                    </div>
+                    <div class="vertical">
+                        <img class="img-top" src="/images/css-removebg.png" alt="">
+                        <div class="vertical-text">CSS</div>
+                        <div class="vertical-desc"></div>
+                    </div>
+                    <div class="vertical">
+                        <img class="img-top" src="/images/JavaScript-logo.png" alt="">
+                        <div class="vertical-text">Javascript</div>
+                        <div class="vertical-desc"></div>
+                    </div>
+                    <div class="vertical">
+                        <img class="img-top" src="/images/c.png" alt="">
+                        <div class="vertical-text">C</div>
+                        <div class="vertical-desc"></div>
+                    </div>
+                    <div class="vertical">
+                        <img class="img-top" src="/images//C++.png" alt="">
+                        <div class="vertical-text">C++</div>
+                        <div class="vertical-desc"></div>
+                    </div>
+                    <div class="vertical">
+                        <img class="img-top" src="/images/dsa-removebg.png" alt="">
+                        <div class="vertical-text">DSA</div>
+                        <div class="vertical-desc"></div>
+                    </div>
                 </div>
-                <div class="vertical">
-                    <img class="img-top" src="/images//C++.png" alt="">
-                    <div class="vertical-text">C++</div>
-                    <div class="vertical-desc"></div>
-                </div>
-                <div class="vertical">
-                    <img class="img-top" src="/images/dsa-removebg.png" alt="">
-                    <div class="vertical-text">DSA</div>
-                    <div class="vertical-desc"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            </section>
+        </main>
+    
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    </div>
 </body>
 <script src="/js/script.js"></script>
+
 </html>

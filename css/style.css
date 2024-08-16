@@ -113,3 +113,26 @@ main hr{
     width: 150px;
     /* left: -55px; */
 }
+.toggleBox{
+    border: 1px solid white;
+    border-radius: 10%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#h1{
+    display: none;
+}
+
+
+@media screen and (max-device-width : 855px) {
+    .mainparent{
+        display: none;
+    }
+    #h1{
+        display: block;
+    }
+}
