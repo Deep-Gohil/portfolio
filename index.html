@@ -22,13 +22,15 @@
                 <div class="div">
                     <h1><span class="d">D</span>eep Gohil.</h1>
                 </div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark fas" id="closemenu"></i>
                 </ul>
+                <i class="fa-solid fa-bars fas" id="openmenu"></i>
             </nav>
             <div class="headerText">
                 <section class="firstSection">
@@ -155,12 +157,61 @@
             <a href="#" class="btn">See More</a>
         </div>
     </div>
-<!-- --------contect---------  -->
+    <!-- --------contect---------  -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-arrow-up-right-from-square"></i> deep888gohil@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +919925814941</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Deep-Gohil"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/deep.gohil.9484"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/its._deep_.21/?next=%2F"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/deep-gohil-0b226b281/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="#" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2024 Deep Gohil. All rights reserved.</p>
+        </div>
 
+    </div>
 
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </body>
 <script src="/js/script.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzfs7RIuhR7IqHl9-lvRuAKZ1vqWJkxxUSJkRz2T_K3Ls6GsTDxM42GvuxUOXDYoD4GXw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = "";
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </html>

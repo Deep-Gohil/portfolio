@@ -18,3 +18,19 @@ const opentab = (tabname) => {
     document.querySelector(`.tabLinks[onclick="opentab('${tabname}')"]`).classList.add("activeLinks");
     document.getElementById(tabname).classList.add("activeTab");
 };
+
+let sidemenu = document.getElementById("sidemenu");
+    
+    const handleOpenMenu = () => {
+        console.log("HJfdhj");
+        sidemenu.style.right = "0"
+    }
+
+    const handleCloseMenu = () => {
+        sidemenu.style.right = "-200px"
+    }
+
+    document.getElementById("openmenu").addEventListener("click", handleOpenMenu)
+    document.getElementById("closemenu").addEventListener("click", handleCloseMenu)
+
+    
