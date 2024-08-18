@@ -365,6 +365,12 @@ html{
         display: block;
         font-size: 25px;
     }
+    #about{
+        margin-top: -500px;
+    }
+    .rightSection img{
+        width: 150px;
+    }
     nav ul{
         background-color: #ff004f;
         position: fixed;
