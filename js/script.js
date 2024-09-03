@@ -22,7 +22,6 @@ const opentab = (tabname) => {
 let sidemenu = document.getElementById("sidemenu");
     
     const handleOpenMenu = () => {
-        console.log("HJfdhj");
         sidemenu.style.right = "0"
     }
 
