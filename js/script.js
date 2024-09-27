@@ -56,3 +56,24 @@ document.getElementById('email').addEventListener('click', function () {
     const email = this.innerText;
     window.location.href = `mailto:${email}`;
 });
+
+
+
+
+// function doPost(e) {
+//     var sheet = SpreadsheetApp.openById('deep888gohil').getSheetByName('Sheet1'); // Replace with your spreadsheet ID and sheet name
+//     var rowData = e.parameter;
+    
+//     // Append form data to the Google Sheet
+//     sheet.appendRow([rowData.Name, rowData.Email, rowData.Message]);
+  
+//     // Send an email to the user
+//     MailApp.sendEmail({
+//       to: rowData.Email,
+//       subject: "Thank You for Your Message!",
+//       body: "Dear " + rowData.Name + ",\n\nThank you for reaching out! We have received your message and will get back to you shortly.\n\nBest Regards,\n[Deep Gohil]"
+//     });
+  
+//     return ContentService.createTextOutput("Success");
+//   }
+  
