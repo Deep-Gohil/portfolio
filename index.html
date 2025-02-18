@@ -126,7 +126,17 @@
             <h1 class="sub-title">My Works</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="/images/boat.png" alt="">
+                    <img src="/images/tomato.png" alt="Boat">
+                    <div class="layer">
+                        <h3>Tomato</h3>
+                        <!-- Description -->
+                        <p>A website for a food delivery.</p>
+                        <a href="https://food-del-tomato.vercel.app/" target="_blank"><i
+                                class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/boat.jpg" alt="Boat">
                     <div class="layer">
                         <h3>BoAt Website</h3>
                         <!-- Description -->
@@ -140,7 +150,8 @@
                         <h3>Playstation</h3>
                         <!-- Description -->
                         <p>A website for a popular Gaming company.</p>
-                        <a href="https://javascript-2.pages.dev/PlayStation/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        <a href="https://javascript-2.pages.dev/PlayStation/" target="_blank"><i
+                                class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -171,13 +182,13 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p id="email" class="action-button"><i class="fa-solid fa-arrow-up-right-from-square"></i> deep888gohil@gmail.com</p>
+                    <p id="email" class="action-button"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        deep888gohil@gmail.com</p>
                     <p id="mobile-number" class="action-button"><i class="fa-solid fa-phone"></i> +919925814941</p>
                     <div class="social-icons">
                         <a href="https://github.com/Deep-Gohil"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.facebook.com/deep.gohil.9484"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/its._deep_.21/?next=%2F"><i
-                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/deep_gohil_21/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/deep-gohil-0b226b281/"><i
                                 class="fa-brands fa-linkedin"></i></a>
                     </div>
@@ -209,17 +220,17 @@
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response =>{
-            msg.innerHTML = "Message Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML = "";
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully"
+                setTimeout(function () {
+                    msg.innerHTML = "";
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
     })
-  </script>
+</script>
 
 </html>

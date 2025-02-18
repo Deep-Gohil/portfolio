@@ -24,7 +24,6 @@ let sidemenu = document.getElementById("sidemenu");
 const handleOpenMenu = () => {
     sidemenu.style.right = "0"
 }
-
 const handleCloseMenu = () => {
     sidemenu.style.right = "-200px"
 }
